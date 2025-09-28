@@ -1,12 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>BovineFlow - Soporte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BovineFlow - Soporte Técnico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .support-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #4CAF50;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76,175,80,0.15);
+        }
+
+        .contact-card h3 {
+            color: #4CAF50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .email-link:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76,175,80,0.4);
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Soporte BovineFlow</h1>
-    <p>Para soporte técnico, contacta:</p>
-    <p>Email: rmarincompany@gmail.com</p>
-    <p>Respuesta en 24-48 horas</p>
+    <div class="container">
+        <div class="support-card">
+            <div class="header">
+                <div class="logo">🐄</div>
+                <h1>BovineFlow</h1>
+                <p>Centro de Soporte Técnico</p>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2><span class="icon">📧</span>Contacto Directo</h2>
+                    <p>¿Necesitas ayuda? Nuestro equipo está aquí para asistirte.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h3>✉️ Email de Soporte</h3>
+                            <p>Envíanos un mensaje y te responderemos en 24-48 horas</p>
+                            <a href="mailto:rmarincompany@gmail.com?subject=Soporte BovineFlow" class="email-link">
+                                Escribir Email
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <h3>⏰ Tiempo de Respuesta</h3>
+                            <p>• Consultas generales: 24-48 horas<br>
+                               • Problemas técnicos: 12-24 horas<br>
+                               • Bugs críticos: Menos de 12 horas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2><span class="icon">❓</span>Preguntas Frecuentes</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo registro un nuevo celo?</div>
+                        <div class="faq-answer">Ve a "Agregar Celo", selecciona la vaca, ingresa la fecha y confirma. El sistema calculará automáticamente el próximo celo estimado.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Funcionan las notificaciones sin internet?</div>
+                        <div class="faq-answer">Sí, BovineFlow funciona completamente offline. Las notificaciones se programan localmente en tu dispositivo.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">¿Puedo exportar mis datos?</div>
+                        <div class="faq-answer">Próximamente incluiremos funciones de exportación. Mientras tanto, puedes solicitar una copia de tus datos por email.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2><span class="icon">🚀</span>Características Principales</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <strong>Gestión de Celos</strong>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔔</div>
+                            <strong>Notificaciones</strong>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📱</div>
+                            <strong>Offline Ready</strong>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔒</div>
+                            <strong>Datos Seguros</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2><span class="icon">🐛</span>Reportar un Problema</h2>
+                    <p>Al reportar un problema, incluye:</p>
+                    <ul style="margin-left: 2rem; margin-top: 1rem; color: #666;">
+                        <li>Modelo de dispositivo iOS</li>
+                        <li>Versión de BovineFlow</li>
+                        <li>Descripción detallada del problema</li>
+                        <li>Screenshots si es posible</li>
+                        <li>Pasos para reproducir el error</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p><strong>BovineFlow</strong> - Optimizando la gestión ganadera</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8;">© 2025 RMarinCompany - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
