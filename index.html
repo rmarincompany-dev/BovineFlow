@@ -5,478 +5,558 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BovineFlow - Technical Support</title>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-    }
+ body {
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.6;
+     color: #333;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     min-height: 100vh;
+ }
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
+ .container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 2rem;
+ }
 
-    .support-card {
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        overflow: hidden;
-        animation: fadeInUp 0.8s ease-out;
-    }
+ .support-card {
+     background: white;
+     border-radius: 20px;
+     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+     overflow: hidden;
+     animation: fadeInUp 0.8s ease-out;
+ }
 
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-    .header {
-        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-        color: white;
-        padding: 3rem 2rem;
-        text-align: center;
-    }
+ .header {
+     background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+     color: white;
+     padding: 3rem 2rem;
+     text-align: center;
+ }
 
-    .logo {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
+ .logo {
+     font-size: 3rem;
+     margin-bottom: 1rem;
+ }
 
-    .header h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
+ .header h1 {
+     font-size: 2.5rem;
+     font-weight: 700;
+     margin-bottom: 0.5rem;
+ }
 
-    .header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-    }
+ .header p {
+     font-size: 1.2rem;
+     opacity: 0.9;
+ }
 
-    .content {
-        padding: 3rem 2rem;
-    }
+ .content {
+     padding: 3rem 2rem;
+ }
 
-    .section {
-        margin-bottom: 2.5rem;
-    }
+ .section {
+     margin-bottom: 2.5rem;
+ }
 
-    .section h2 {
-        color: #2c3e50;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+ .section h2 {
+     color: #2c3e50;
+     font-size: 1.5rem;
+     margin-bottom: 1rem;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+ }
 
-    .icon {
-        width: 24px;
-        height: 24px;
-        background: #4CAF50;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 0.8rem;
-    }
+ .icon {
+     width: 24px;
+     height: 24px;
+     background: #4CAF50;
+     border-radius: 50%;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 0.8rem;
+ }
 
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-    }
+ .contact-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+ }
 
-    .contact-card {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-    }
+ .contact-card {
+     background: #f8f9fa;
+     padding: 1.5rem;
+     border-radius: 12px;
+     border: 2px solid transparent;
+     transition: all 0.3s ease;
+ }
 
-    .contact-card:hover {
-        border-color: #4CAF50;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(76,175,80,0.15);
-    }
+ .contact-card:hover {
+     border-color: #4CAF50;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 25px rgba(76,175,80,0.15);
+ }
 
-    .contact-card h3 {
-        color: #4CAF50;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-    }
+ .contact-card h3 {
+     color: #4CAF50;
+     margin-bottom: 0.5rem;
+     font-size: 1.1rem;
+ }
 
-    .contact-card p {
-        color: #666;
-        font-size: 0.9rem;
-    }
+ .contact-card p {
+     color: #666;
+     font-size: 0.9rem;
+ }
 
-    .email-link {
-        display: inline-block;
-        background: #4CAF50;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        margin-top: 1rem;
-    }
+ .email-link {
+     display: inline-block;
+     background: #4CAF50;
+     color: white;
+     padding: 12px 24px;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: 600;
+     transition: all 0.3s ease;
+     margin-top: 1rem;
+ }
 
-    .email-link:hover {
-        background: #45a049;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(76,175,80,0.4);
-    }
+ .email-link:hover {
+     background: #45a049;
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgba(76,175,80,0.4);
+ }
 
-    .faq-item {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 12px;
-        margin-bottom: 1rem;
-        border-left: 4px solid #4CAF50;
-    }
+ .faq-item {
+     background: #f8f9fa;
+     padding: 1.5rem;
+     border-radius: 12px;
+     margin-bottom: 1rem;
+     border-left: 4px solid #4CAF50;
+ }
 
-    .faq-question {
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 0.5rem;
-    }
+ .faq-question {
+     font-weight: 600;
+     color: #2c3e50;
+     margin-bottom: 0.5rem;
+ }
 
-    .faq-answer {
-        color: #666;
-    }
+ .faq-answer {
+     color: #666;
+ }
 
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-    }
+ .features-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1rem;
+     margin-top: 1rem;
+ }
 
-    .feature-item {
-        background: #e8f5e8;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: center;
-    }
+ .feature-item {
+     background: #e8f5e8;
+     padding: 1rem;
+     border-radius: 8px;
+     text-align: center;
+ }
 
-    .feature-icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
+ .feature-icon {
+     font-size: 2rem;
+     margin-bottom: 0.5rem;
+ }
 
-    .footer {
-        background: #2c3e50;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-    }
+ .footer {
+     background: #2c3e50;
+     color: white;
+     padding: 2rem;
+     text-align: center;
+ }
 
-    .language-selector {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
+ .language-selector {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     background: rgba(255, 255, 255, 0.9);
+     padding: 10px;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+     z-index: 1000;
+ }
 
-    .language-selector select {
-        border: none;
-        background: transparent;
-        font-size: 14px;
-        padding: 5px;
-        cursor: pointer;
-    }
+ .language-selector select {
+     border: none;
+     background: transparent;
+     font-size: 14px;
+     padding: 5px;
+     cursor: pointer;
+ }
 
-    .app-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1rem;
-        border-radius: 16px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+ .app-icon {
+     width: 80px;
+     height: 80px;
+     margin: 0 auto 1rem;
+     border-radius: 16px;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+ }
 
-    @media (max-width: 768px) {
-        .container {
-            padding: 1rem;
-        }
+ @media (max-width: 768px) {
+     .container {
+         padding: 1rem;
+     }
 
-        .header {
-            padding: 2rem 1rem;
-        }
+     .header {
+         padding: 2rem 1rem;
+     }
 
-        .header h1 {
-            font-size: 2rem;
-        }
+     .header h1 {
+         font-size: 2rem;
+     }
 
-        .content {
-            padding: 2rem 1rem;
-        }
-    }
+     .content {
+         padding: 2rem 1rem;
+     }
+ }
 </style>
 </head>
 <body>
 <!-- Language Selector -->
 <div class="language-selector">
-    <select id="languageSelect" onchange="changeLanguage()">
-        <option value="es">🇪🇸 Español</option>
-        <option value="en">🇺🇸 English</option>
-        <option value="fr">🇫🇷 Français</option>
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="hi">🇮🇳 हिन्दी</option>
-    </select>
+ <select id="languageSelect" onchange="changeLanguage()">
+     <option value="es">🇪🇸 Español</option>
+     <option value="en">🇺🇸 English</option>
+     <option value="fr">🇫🇷 Français</option>
+     <option value="de">🇩🇪 Deutsch</option>
+     <option value="hi">🇮🇳 हिन्दी</option>
+ </select>
 </div>
 
 <div class="container">
-    <div class="support-card">
-        <div class="header">
-            <img src="ic_logo.png" alt="BovineFlow Logo" class="app-icon">
-            <h1 id="app-title">BovineFlow</h1>
-            <p id="support-title">Centro de Soporte Técnico</p>
-        </div>
+ <div class="support-card">
+     <div class="header">
+         <img src="ic_logo.png" alt="BovineFlow Logo" class="app-icon">
+         <h1 id="app-title">BovineFlow</h1>
+         <p id="support-title">Centro de Soporte Técnico</p>
+     </div>
 
-        <div class="content">
-            <div class="section">
-                <h2><span class="icon">📧</span><span id="contact-title">Contacto Directo</span></h2>
-                <p id="contact-description">¿Necesitas ayuda? Nuestro equipo está aquí para asistirte.</p>
+     <div class="content">
+         <div class="section">
+             <h2><span class="icon">📧</span><span id="contact-title">Contacto Directo</span></h2>
+             <p id="contact-description">¿Necesitas ayuda? Nuestro equipo está aquí para asistirte.</p>
 
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3 id="email-title">✉️ Email de Soporte</h3>
-                        <p id="email-description">Envíanos un mensaje y te responderemos entre 3-15 días</p>
-                        <a href="mailto:rmarincompany@gmail.com?subject=Soporte BovineFlow" class="email-link" id="email-button">
-                            Escribir Email
-                        </a>
-                    </div>
+             <div class="contact-grid">
+                 <div class="contact-card">
+                     <h3 id="email-title">✉️ Email de Soporte</h3>
+                     <p id="email-description">Envíanos un mensaje y te responderemos entre 3-15 días</p>
+                     <a href="mailto:rmarincompany@gmail.com?subject=Soporte BovineFlow" class="email-link" id="email-button">
+                         Escribir Email
+                     </a>
+                 </div>
 
-                    <div class="contact-card">
-                        <h3 id="response-time-title">⏰ Tiempo de Respuesta</h3>
-                        <p id="response-time-content">• Consultas generales: 3-15 días<br>
-                           • Problemas técnicos: 5-10 días<br>
-                           • Bugs críticos: 3-7 días</p>
-                    </div>
-                </div>
-            </div>
+                 <div class="contact-card">
+                     <h3 id="response-time-title">⏰ Tiempo de Respuesta</h3>
+                     <p id="response-time-content">• Consultas generales: 3-15 días<br>
+                        • Problemas técnicos: 5-10 días<br>
+                        • Bugs críticos: 3-7 días</p>
+                 </div>
+             </div>
+         </div>
 
-            <div class="section">
-                <h2><span class="icon">❓</span><span id="faq-title">Preguntas Frecuentes</span></h2>
+         <div class="section">
+             <h2><span class="icon">❓</span><span id="faq-title">Preguntas Frecuentes</span></h2>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Cómo registro un nuevo celo?</div>
-                    <div class="faq-answer">Ve a "Agregar Celo", selecciona la vaca, ingresa la fecha y confirma. El sistema calculará automáticamente el próximo celo estimado.</div>
-                </div>
+             <div class="faq-item">
+                 <div class="faq-question" id="faq-heat-question">¿Cómo registro un nuevo celo?</div>
+                 <div class="faq-answer" id="faq-heat-answer">Ve a "Agregar Celo", selecciona la vaca, ingresa la fecha y confirma. El sistema calculará automáticamente el próximo celo estimado.</div>
+             </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Funcionan las notificaciones sin internet?</div>
-                    <div class="faq-answer">Sí, BovineFlow funciona completamente offline. Las notificaciones se programan localmente en tu dispositivo.</div>
-                </div>
+             <div class="faq-item">
+                 <div class="faq-question" id="faq-offline-question">¿Funcionan las notificaciones sin internet?</div>
+                 <div class="faq-answer" id="faq-offline-answer">Sí, BovineFlow funciona completamente offline. Las notificaciones se programan localmente en tu dispositivo.</div>
+             </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" id="faq-export-question">¿Puedo exportar mis datos?</div>
-                    <div class="faq-answer" id="faq-export-answer">Todos tus datos se almacenan localmente en tu dispositivo. No guardamos información en nuestros servidores, por lo que tienes control total sobre tus datos. Puedes respaldar o transferir información usando las opciones de tu dispositivo iOS.</div>
-                </div>
-            </div>
+             <div class="faq-item">
+                 <div class="faq-question" id="faq-export-question">¿Puedo exportar mis datos?</div>
+                 <div class="faq-answer" id="faq-export-answer">Todos tus datos se almacenan localmente en tu dispositivo. No guardamos información en nuestros servidores, por lo que tienes control total sobre tus datos. Puedes respaldar o transferir información usando las opciones de tu dispositivo iOS.</div>
+             </div>
+         </div>
 
-            <div class="section">
-                <h2><span class="icon">🚀</span><span id="features-title">Características Principales</span></h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">📊</div>
-                        <strong>Gestión de Celos</strong>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🔔</div>
-                        <strong>Notificaciones</strong>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📱</div>
-                        <strong>Offline Ready</strong>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🔒</div>
-                        <strong>Datos Seguros</strong>
-                    </div>
-                </div>
-            </div>
+         <div class="section">
+             <h2><span class="icon">🚀</span><span id="features-title">Características Principales</span></h2>
+             <div class="features-grid">
+                 <div class="feature-item">
+                     <div class="feature-icon">📊</div>
+                     <strong id="feature-heat-management">Gestión de Celos</strong>
+                 </div>
+                 <div class="feature-item">
+                     <div class="feature-icon">🔔</div>
+                     <strong id="feature-notifications">Notificaciones</strong>
+                 </div>
+                 <div class="feature-item">
+                     <div class="feature-icon">📱</div>
+                     <strong id="feature-offline">Offline Ready</strong>
+                 </div>
+                 <div class="feature-item">
+                     <div class="feature-icon">🔒</div>
+                     <strong id="feature-secure-data">Datos Seguros</strong>
+                 </div>
+             </div>
+         </div>
 
-            <div class="section">
-                <h2><span class="icon">🐛</span><span id="report-title">Reportar un Problema</span></h2>
-                <p>Al reportar un problema, incluye:</p>
-                <ul style="margin-left: 2rem; margin-top: 1rem; color: #666;">
-                    <li>Modelo de dispositivo iOS</li>
-                    <li>Versión de BovineFlow</li>
-                    <li>Descripción detallada del problema</li>
-                    <li>Screenshots si es posible</li>
-                    <li>Pasos para reproducir el error</li>
-                </ul>
-            </div>
-        </div>
+         <div class="section">
+             <h2><span class="icon">🐛</span><span id="report-title">Reportar un Problema</span></h2>
+             <p id="report-description">Al reportar un problema, incluye:</p>
+             <ul style="margin-left: 2rem; margin-top: 1rem; color: #666;">
+                 <li id="report-device">Modelo de dispositivo iOS</li>
+                 <li id="report-version">Versión de BovineFlow</li>
+                 <li id="report-detailed-description">Descripción detallada del problema</li>
+                 <li id="report-screenshots">Screenshots si es posible</li>
+                 <li id="report-steps">Pasos para reproducir el error</li>
+             </ul>
+         </div>
+     </div>
 
-        <div class="footer">
-            <p><strong>BovineFlow</strong> - <span id="footer-subtitle">Optimizando la gestión ganadera</span></p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;" id="footer-copyright">© 2025 RMarinCompany - Todos los derechos reservados</p>
-            <div style="margin-top: 1rem;">
-                <a href="privacy.html" style="color: #4CAF50; text-decoration: none; font-weight: 600;" id="privacy-link">
-                    🔒 Política de Privacidad
-                </a>
-            </div>
-        </div>
-    </div>
+     <div class="footer">
+         <p><strong>BovineFlow</strong> - <span id="footer-subtitle">Optimizando la gestión ganadera</span></p>
+         <p style="margin-top: 0.5rem; opacity: 0.8;" id="footer-copyright">© 2025 RMarinCompany - Todos los derechos reservados</p>
+         <div style="margin-top: 1rem;">
+             <a href="privacy.html" style="color: #4CAF50; text-decoration: none; font-weight: 600;" id="privacy-link">
+                 🔒 Política de Privacidad
+             </a>
+         </div>
+     </div>
+ </div>
 </div>
 
 <script>
-    const translations = {
-        es: {
-            'app-title': 'BovineFlow',
-            'support-title': 'Centro de Soporte Técnico',
-            'contact-title': 'Contacto Directo',
-            'contact-description': '¿Necesitas ayuda? Nuestro equipo está aquí para asistirte.',
-            'email-title': '✉️ Email de Soporte',
-            'email-description': 'Envíanos un mensaje y te responderemos entre 3-15 días',
-            'email-button': 'Escribir Email',
-            'response-time-title': '⏰ Tiempo de Respuesta',
-            'response-time-content': '• Consultas generales: 3-15 días<br>• Problemas técnicos: 5-10 días<br>• Bugs críticos: 3-7 días',
-            'faq-title': 'Preguntas Frecuentes',
-            'features-title': 'Características Principales',
-            'report-title': 'Reportar un Problema',
-            'footer-subtitle': 'Optimizando la gestión ganadera',
-            'footer-copyright': '© 2025 RMarinCompany - Todos los derechos reservados',
-            'privacy-link': '🔒 Política de Privacidad'
-        },
-        en: {
-            'app-title': 'BovineFlow',
-            'support-title': 'Technical Support Center',
-            'contact-title': 'Direct Contact',
-            'contact-description': 'Need help? Our team is here to assist you.',
-            'email-title': '✉️ Support Email',
-            'email-description': 'Send us a message and we\'ll respond within 3-15 days',
-            'email-button': 'Write Email',
-            'response-time-title': '⏰ Response Time',
-            'response-time-content': '• General inquiries: 3-15 days<br>• Technical issues: 5-10 days<br>• Critical bugs: 3-7 days',
-            'faq-title': 'Frequently Asked Questions',
-            'features-title': 'Main Features',
-            'report-title': 'Report an Issue',
-            'footer-subtitle': 'Optimizing livestock management',
-            'footer-copyright': '© 2025 RMarinCompany - All rights reserved',
-            'privacy-link': '🔒 Privacy Policy'
-        },
-        fr: {
-            'app-title': 'BovineFlow',
-            'support-title': 'Centre de Support Technique',
-            'contact-title': 'Contact Direct',
-            'contact-description': 'Besoin d\'aide? Notre équipe est là pour vous assister.',
-            'email-title': '✉️ Email de Support',
-            'email-description': 'Envoyez-nous un message et nous répondrons dans 3-15 jours',
-            'email-button': 'Écrire un Email',
-            'response-time-title': '⏰ Temps de Réponse',
-            'response-time-content': '• Demandes générales: 3-15 jours<br>• Problèmes techniques: 5-10 jours<br>• Bugs critiques: 3-7 jours',
-            'faq-title': 'Questions Fréquemment Posées',
-            'features-title': 'Caractéristiques Principales',
-            'report-title': 'Signaler un Problème',
-            'footer-subtitle': 'Optimisation de la gestion du bétail',
-            'footer-copyright': '© 2025 RMarinCompany - Tous droits réservés',
-            'privacy-link': '🔒 Politique de Confidentialité'
-        },
-        de: {
-            'app-title': 'BovineFlow',
-            'support-title': 'Technisches Support-Center',
-            'contact-title': 'Direkter Kontakt',
-            'contact-description': 'Brauchen Sie Hilfe? Unser Team ist da, um Ihnen zu helfen.',
-            'email-title': '✉️ Support-Email',
-            'email-description': 'Senden Sie uns eine Nachricht und wir antworten innerhalb von 3-15 Tagen',
-            'email-button': 'Email Schreiben',
-            'response-time-title': '⏰ Antwortzeit',
-            'response-time-content': '• Allgemeine Anfragen: 3-15 Tage<br>• Technische Probleme: 5-10 Tage<br>• Kritische Bugs: 3-7 Tage',
-            'faq-title': 'Häufig Gestellte Fragen',
-            'features-title': 'Hauptmerkmale',
-            'report-title': 'Problem Melden',
-            'footer-subtitle': 'Optimierung der Viehwirtschaft',
-            'footer-copyright': '© 2025 RMarinCompany - Alle Rechte vorbehalten',
-            'privacy-link': '🔒 Datenschutzrichtlinie'
-        },
-        hi: {
-            'app-title': 'BovineFlow',
-            'support-title': 'तकनीकी सहायता केंद्र',
-            'contact-title': 'प्रत्यक्ष संपर्क',
-            'contact-description': 'मदद चाहिए? हमारी टीम आपकी सहायता के लिए यहाँ है।',
-            'email-title': '✉️ सहायता ईमेल',
-            'email-description': 'हमें संदेश भेजें और हम 3-15 दिनों में जवाब देंगे',
-            'email-button': 'ईमेल लिखें',
-            'response-time-title': '⏰ प्रतिक्रिया समय',
-            'response-time-content': '• सामान्य पूछताछ: 3-15 दिन<br>• तकनीकी समस्याएं: 5-10 दिन<br>• गंभीर बग: 3-7 दिन',
-            'faq-title': 'अक्सर पूछे जाने वाले प्रश्न',
-            'features-title': 'मुख्य विशेषताएं',
-            'report-title': 'समस्या की रिपोर्ट करें',
-            'footer-subtitle': 'पशुधन प्रबंधन का अनुकूलन',
-            'footer-copyright': '© 2025 RMarinCompany - सभी अधिकार सुरक्षित',
-            'privacy-link': '🔒 गोपनीयता नीति'
-        }
-    };
+ const translations = {
+     es: {
+         'app-title': 'BovineFlow',
+         'support-title': 'Centro de Soporte Técnico',
+         'contact-title': 'Contacto Directo',
+         'contact-description': '¿Necesitas ayuda? Nuestro equipo está aquí para asistirte.',
+         'email-title': '✉️ Email de Soporte',
+         'email-description': 'Envíanos un mensaje y te responderemos entre 3-15 días',
+         'email-button': 'Escribir Email',
+         'response-time-title': '⏰ Tiempo de Respuesta',
+         'response-time-content': '• Consultas generales: 3-15 días<br>• Problemas técnicos: 5-10 días<br>• Bugs críticos: 3-7 días',
+         'faq-title': 'Preguntas Frecuentes',
+         'features-title': 'Características Principales',
+         'report-title': 'Reportar un Problema',
+         'footer-subtitle': 'Optimizando la gestión ganadera',
+         'footer-copyright': '© 2025 RMarinCompany - Todos los derechos reservados',
+         'privacy-link': '🔒 Política de Privacidad',
+         'faq-export-question': '¿Puedo exportar mis datos?',
+         'faq-export-answer': 'Todos tus datos se almacenan localmente en tu dispositivo. No guardamos información en nuestros servidores, por lo que tienes control total sobre tus datos. Puedes respaldar o transferir información usando las opciones de tu dispositivo iOS.',
+         'faq-heat-question': '¿Cómo registro un nuevo celo?',
+         'faq-heat-answer': 'Ve a "Agregar Celo", selecciona la vaca, ingresa la fecha y confirma. El sistema calculará automáticamente el próximo celo estimado.',
+         'faq-offline-question': '¿Funcionan las notificaciones sin internet?',
+         'faq-offline-answer': 'Sí, BovineFlow funciona completamente offline. Las notificaciones se programan localmente en tu dispositivo.',
+         'feature-heat-management': 'Gestión de Celos',
+         'feature-notifications': 'Notificaciones',
+         'feature-offline': 'Offline Ready',
+         'feature-secure-data': 'Datos Seguros',
+         'report-description': 'Al reportar un problema, incluye:',
+         'report-device': 'Modelo de dispositivo iOS',
+         'report-version': 'Versión de BovineFlow',
+         'report-detailed-description': 'Descripción detallada del problema',
+         'report-screenshots': 'Screenshots si es posible',
+         'report-steps': 'Pasos para reproducir el error'
+     },
+     en: {
+         'app-title': 'BovineFlow',
+         'support-title': 'Technical Support Center',
+         'contact-title': 'Direct Contact',
+         'contact-description': 'Need help? Our team is here to assist you.',
+         'email-title': '✉️ Support Email',
+         'email-description': 'Send us a message and we\'ll respond within 3-15 days',
+         'email-button': 'Write Email',
+         'response-time-title': '⏰ Response Time',
+         'response-time-content': '• General inquiries: 3-15 days<br>• Technical issues: 5-10 days<br>• Critical bugs: 3-7 days',
+         'faq-title': 'Frequently Asked Questions',
+         'features-title': 'Main Features',
+         'report-title': 'Report an Issue',
+         'footer-subtitle': 'Optimizing livestock management',
+         'footer-copyright': '© 2025 RMarinCompany - All rights reserved',
+         'privacy-link': '🔒 Privacy Policy',
+         'faq-export-question': 'Can I export my data?',
+         'faq-export-answer': 'All your data is stored locally on your device. We don\'t store any information on our servers, so you have complete control over your data. You can backup or transfer information using your iOS device options.',
+         'faq-heat-question': 'How do I register a new heat cycle?',
+         'faq-heat-answer': 'Go to "Add Heat", select the cow, enter the date and confirm. The system will automatically calculate the next estimated heat cycle.',
+         'faq-offline-question': 'Do notifications work without internet?',
+         'faq-offline-answer': 'Yes, BovineFlow works completely offline. Notifications are scheduled locally on your device.',
+         'feature-heat-management': 'Heat Management',
+         'feature-notifications': 'Notifications',
+         'feature-offline': 'Offline Ready',
+         'feature-secure-data': 'Secure Data',
+         'report-description': 'When reporting an issue, include:',
+         'report-device': 'iOS device model',
+         'report-version': 'BovineFlow version',
+         'report-detailed-description': 'Detailed problem description',
+         'report-screenshots': 'Screenshots if possible',
+         'report-steps': 'Steps to reproduce the error'
+     },
+     fr: {
+         'app-title': 'BovineFlow',
+         'support-title': 'Centre de Support Technique',
+         'contact-title': 'Contact Direct',
+         'contact-description': 'Besoin d\'aide? Notre équipe est là pour vous assister.',
+         'email-title': '✉️ Email de Support',
+         'email-description': 'Envoyez-nous un message et nous répondrons dans 3-15 jours',
+         'email-button': 'Écrire un Email',
+         'response-time-title': '⏰ Temps de Réponse',
+         'response-time-content': '• Demandes générales: 3-15 jours<br>• Problèmes techniques: 5-10 jours<br>• Bugs critiques: 3-7 jours',
+         'faq-title': 'Questions Fréquemment Posées',
+         'features-title': 'Caractéristiques Principales',
+         'report-title': 'Signaler un Problème',
+         'footer-subtitle': 'Optimisation de la gestion du bétail',
+         'footer-copyright': '© 2025 RMarinCompany - Tous droits réservés',
+         'privacy-link': '🔒 Politique de Confidentialité',
+         'faq-export-question': 'Puis-je exporter mes données?',
+         'faq-export-answer': 'Toutes vos données sont stockées localement sur votre appareil. Nous ne stockons aucune information sur nos serveurs, vous avez donc un contrôle total sur vos données. Vous pouvez sauvegarder ou transférer des informations en utilisant les options de votre appareil iOS.',
+         'faq-heat-question': 'Comment enregistrer un nouveau cycle de chaleur?',
+         'faq-heat-answer': 'Allez à "Ajouter Chaleur", sélectionnez la vache, entrez la date et confirmez. Le système calculera automatiquement le prochain cycle de chaleur estimé.',
+         'faq-offline-question': 'Les notifications fonctionnent-elles sans internet?',
+         'faq-offline-answer': 'Oui, BovineFlow fonctionne complètement hors ligne. Les notifications sont programmées localement sur votre appareil.',
+         'feature-heat-management': 'Gestion des Chaleurs',
+         'feature-notifications': 'Notifications',
+         'feature-offline': 'Prêt Hors Ligne',
+         'feature-secure-data': 'Données Sécurisées',
+         'report-description': 'Lors du signalement d\'un problème, incluez:',
+         'report-device': 'Modèle d\'appareil iOS',
+         'report-version': 'Version de BovineFlow',
+         'report-detailed-description': 'Description détaillée du problème',
+         'report-screenshots': 'Captures d\'écran si possible',
+         'report-steps': 'Étapes pour reproduire l\'erreur'
+     },
+     de: {
+         'app-title': 'BovineFlow',
+         'support-title': 'Technisches Support-Center',
+         'contact-title': 'Direkter Kontakt',
+         'contact-description': 'Brauchen Sie Hilfe? Unser Team ist da, um Ihnen zu helfen.',
+         'email-title': '✉️ Support-Email',
+         'email-description': 'Senden Sie uns eine Nachricht und wir antworten innerhalb von 3-15 Tagen',
+         'email-button': 'Email Schreiben',
+         'response-time-title': '⏰ Antwortzeit',
+         'response-time-content': '• Allgemeine Anfragen: 3-15 Tage<br>• Technische Probleme: 5-10 Tage<br>• Kritische Bugs: 3-7 Tage',
+         'faq-title': 'Häufig Gestellte Fragen',
+         'features-title': 'Hauptmerkmale',
+         'report-title': 'Problem Melden',
+         'footer-subtitle': 'Optimierung der Viehwirtschaft',
+         'footer-copyright': '© 2025 RMarinCompany - Alle Rechte vorbehalten',
+         'privacy-link': '🔒 Datenschutzrichtlinie',
+         'faq-export-question': 'Kann ich meine Daten exportieren?',
+         'faq-export-answer': 'Alle Ihre Daten werden lokal auf Ihrem Gerät gespeichert. Wir speichern keine Informationen auf unseren Servern, sodass Sie die vollständige Kontrolle über Ihre Daten haben. Sie können Informationen mit den Optionen Ihres iOS-Geräts sichern oder übertragen.',
+         'faq-heat-question': 'Wie registriere ich einen neuen Brunst-Zyklus?',
+         'faq-heat-answer': 'Gehen Sie zu "Brunst Hinzufügen", wählen Sie die Kuh aus, geben Sie das Datum ein und bestätigen Sie. Das System berechnet automatisch den nächsten geschätzten Brunst-Zyklus.',
+         'faq-offline-question': 'Funktionieren Benachrichtigungen ohne Internet?',
+         'faq-offline-answer': 'Ja, BovineFlow funktioniert vollständig offline. Benachrichtigungen werden lokal auf Ihrem Gerät geplant.',
+         'feature-heat-management': 'Brunst-Management',
+         'feature-notifications': 'Benachrichtigungen',
+         'feature-offline': 'Offline Bereit',
+         'feature-secure-data': 'Sichere Daten',
+         'report-description': 'Beim Melden eines Problems, geben Sie an:',
+         'report-device': 'iOS-Gerätemodell',
+         'report-version': 'BovineFlow-Version',
+         'report-detailed-description': 'Detaillierte Problembeschreibung',
+         'report-screenshots': 'Screenshots falls möglich',
+         'report-steps': 'Schritte zur Reproduktion des Fehlers'
+     },
+     hi: {
+         'app-title': 'BovineFlow',
+         'support-title': 'तकनीकी सहायता केंद्र',
+         'contact-title': 'प्रत्यक्ष संपर्क',
+         'contact-description': 'मदद चाहिए? हमारी टीम आपकी सहायता के लिए यहाँ है।',
+         'email-title': '✉️ सहायता ईमेल',
+         'email-description': 'हमें संदेश भेजें और हम 3-15 दिनों में जवाब देंगे',
+         'email-button': 'ईमेल लिखें',
+         'response-time-title': '⏰ प्रतिक्रिया समय',
+         'response-time-content': '• सामान्य पूछताछ: 3-15 दिन<br>• तकनीकी समस्याएं: 5-10 दिन<br>• गंभीर बग: 3-7 दिन',
+         'faq-title': 'अक्सर पूछे जाने वाले प्रश्न',
+         'features-title': 'मुख्य विशेषताएं',
+         'report-title': 'समस्या की रिपोर्ट करें',
+         'footer-subtitle': 'पशुधन प्रबंधन का अनुकूलन',
+         'footer-copyright': '© 2025 RMarinCompany - सभी अधिकार सुरक्षित',
+         'privacy-link': '🔒 गोपनीयता नीति',
+         'faq-export-question': 'क्या मैं अपना डेटा एक्सपोर्ट कर सकता हूं?',
+         'faq-export-answer': 'आपका सभी डेटा आपके डिवाइस में स्थानीय रूप से संग्रहीत है। हम अपने सर्वर पर कोई जानकारी संग्रहीत नहीं करते हैं, इसलिए आपका अपने डेटा पर पूर्ण नियंत्रण है। आप अपने iOS डिवाइस के विकल्पों का उपयोग करके जानकारी का बैकअप या स्थानांतरण कर सकते हैं।',
+         'faq-heat-question': 'मैं नया गर्मी चक्र कैसे रजिस्टर करूं?',
+         'faq-heat-answer': '"गर्मी जोड़ें" पर जाएं, गाय का चयन करें, तारीख दर्ज करें और पुष्टि करें। सिस्टम स्वचालित रूप से अगले अनुमानित गर्मी चक्र की गणना करेगा।',
+         'faq-offline-question': 'क्या बिना इंटरनेट के नोटिफिकेशन काम करते हैं?',
+         'faq-offline-answer': 'हां, BovineFlow पूरी तरह से ऑफलाइन काम करता है। नोटिफिकेशन आपके डिवाइस में स्थानीय रूप से शेड्यूल होते हैं।',
+         'feature-heat-management': 'गर्मी प्रबंधन',
+         'feature-notifications': 'सूचनाएं',
+         'feature-offline': 'ऑफलाइन तैयार',
+         'feature-secure-data': 'सुरक्षित डेटा',
+         'report-description': 'समस्या की रिपोर्ट करते समय, शामिल करें:',
+         'report-device': 'iOS डिवाइस मॉडल',
+         'report-version': 'BovineFlow संस्करण',
+         'report-detailed-description': 'समस्या का विस्तृत विवरण',
+         'report-screenshots': 'यदि संभव हो तो स्क्रीनशॉट्स',
+         'report-steps': 'त्रुटि को पुन: उत्पन्न करने के चरण'
+     }
+ };
 
-    function changeLanguage() {
-        const language = document.getElementById('languageSelect').value;
-        const translation = translations[language];
+ function changeLanguage() {
+     const language = document.getElementById('languageSelect').value;
+     const translation = translations[language];
 
-        // Update all translatable elements
-        Object.keys(translation).forEach(key => {
-            const element = document.getElementById(key);
-            if (element) {
-                if (key.includes('content')) {
-                    element.innerHTML = translation[key];
-                } else {
-                    element.textContent = translation[key];
-                }
-            }
-        });
+     // Update all translatable elements
+     Object.keys(translation).forEach(key => {
+         const element = document.getElementById(key);
+         if (element) {
+             if (key.includes('content')) {
+                 element.innerHTML = translation[key];
+             } else {
+                 element.textContent = translation[key];
+             }
+         }
+     });
 
-        // Update email link subject
-        const emailLink = document.querySelector('.email-link');
-        if (emailLink) {
-            const subjects = {
-                es: 'Soporte BovineFlow',
-                en: 'BovineFlow Support',
-                fr: 'Support BovineFlow',
-                de: 'BovineFlow Support',
-                hi: 'BovineFlow सहायता'
-            };
-            emailLink.href = `mailto:rmarincompany@gmail.com?subject=${subjects[language]}`;
-        }
+     // Update email link subject
+     const emailLink = document.querySelector('.email-link');
+     if (emailLink) {
+         const subjects = {
+             es: 'Soporte BovineFlow',
+             en: 'BovineFlow Support',
+             fr: 'Support BovineFlow',
+             de: 'BovineFlow Support',
+             hi: 'BovineFlow सहायता'
+         };
+         emailLink.href = `mailto:rmarincompany@gmail.com?subject=${subjects[language]}`;
+     }
 
-        // Update document language
-        document.documentElement.lang = language;
-    }
+     // Update document language
+     document.documentElement.lang = language;
+ }
 
-    // Set default language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        // Detect browser language
-        const browserLang = navigator.language.split('-')[0];
-        const supportedLangs = ['es', 'en', 'fr', 'de', 'hi'];
-        const defaultLang = supportedLangs.includes(browserLang) ? browserLang : 'es';
+ // Set default language on page load
+ document.addEventListener('DOMContentLoaded', function() {
+     // Detect browser language
+     const browserLang = navigator.language.split('-')[0];
+     const supportedLangs = ['es', 'en', 'fr', 'de', 'hi'];
+     const defaultLang = supportedLangs.includes(browserLang) ? browserLang : 'es';
 
-        document.getElementById('languageSelect').value = defaultLang;
-        changeLanguage();
-    });
+     document.getElementById('languageSelect').value = defaultLang;
+     changeLanguage();
+ });
 </script>
 </body>
 </html>
